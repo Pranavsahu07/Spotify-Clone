@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+  background-color: antiquewhite;
+  font-family: 'Varela Round', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  height: 65px;
+  background-color: black;
+  color: white;
+}
+
+nav ul li {
+  padding: 0 12px;
+}
+
+.brand img {
+  width: 44px;
+  padding: 0 8px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.container {
+  min-height: 72vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 23px auto;
+  width: 70%;
+  border-radius: 12px;
+  padding: 20px 34px;
+  background-image: url('bg.jpg');
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+#searchBox {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  width: 60%;
+}
+
+#shuffleBtn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+
+.bottom {
+  position: sticky;
+  bottom: 0;
+  height: 130px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icons {
+  margin-top: 14px;
+}
+
+.icons i {
+  cursor: pointer;
+}
+
+#myProgressBar {
+  width: 80vw;
+  cursor: pointer;
+}
+
+.songItemContainer {
+  overflow-y: auto;
+  max-height: 50vh;
+  scrollbar-width: none;
+}
+
+.songItemContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.songItem {
+  height: 50px;
+  display: flex;
+  background-color: white;
+  color: black;
+  margin: 8px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+  padding: 0 10px;
+  transition: background 0.2s;
+}
+
+.songItem:hover {
+  background-color: #e0e0e0;
+}
+
+.songItem.active {
+  border: 2px solid green;
+  background-color: #d0ffd0;
+}
+
+.songItem img {
+  width: 43px;
+  margin-right: 10px;
+  border-radius: 34px;
+}
+
+.songName {
+  flex-grow: 1;
+}
+
+.timestamp {
+  display: flex;
+  align-items: center;
+}
+
+.timestamp i {
+  cursor: pointer;
+}
+
+.songInfo {
+  position: absolute;
+  left: 10vw;
+}
+
+.songInfo img {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+.timeDisplay {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
